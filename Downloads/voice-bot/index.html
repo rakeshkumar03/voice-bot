@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Bot - Rakesh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Voice Bot Rakesh</h1>
+            <button id="historyToggle" class="history-toggle">📜 History</button>
+        </div>
+        <p class="subtitle">Chat with me using voice or text</p>
+        
+        <!-- Chat History Sidebar -->
+        <div class="history-sidebar" id="historySidebar">
+            <div class="history-header">
+                <h3>Chat History</h3>
+                <button id="closeHistory" class="close-btn">✕</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="no-history">No chat history yet</p>
+            </div>
+            <button id="clearHistory" class="clear-history-btn">🗑️ Clear All History</button>
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                Welcome! I'm Rakesh. Please use the microphone button for voice input or type your message below to begin.
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="text-input-wrapper">
+                <input 
+                    type="text" 
+                    id="textInput" 
+                    placeholder="Type your message here..."
+                    aria-label="Text input"
+                />
+                <button id="sendButton" class="send-button" aria-label="Send message">
+                    📤
+                </button>
+            </div>
+            
+            <div class="voice-controls">
+                <button id="micButton" class="mic-button" aria-label="Voice input">
+                    <span class="mic-icon">🎤</span>
+                </button>
+                <p id="status">Click mic for voice or type above</p>
+            </div>
+            
+            <div class="transcript">
+                <p id="interimTranscript" class="interim"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
